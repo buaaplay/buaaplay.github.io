@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengyiang Liu</title>
+  <meta name="description" content="Pengyiang Liu - M.S. student at CoLab, Institute of Artificial Intelligence, Beihang University. Research on streaming and long-form video understanding for multimodal LLMs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231F3A5F'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' fill='%23FCFBF8' text-anchor='middle'%3EPL%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="masthead">
+  <nav class="nav">
+    <span class="nav-name">Pengyiang Liu</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="about">
+    <div class="hero-text" data-anim>
+      <p class="hero-kicker">M.S. Student, Beihang University</p>
+      <h1>Pengyiang Liu<span class="cn">刘彭逸昂</span></h1>
+      <p class="hero-lede">
+        I am a first-year master's student at the <a href="https://colalab.net" rel="noopener">CoLab</a>,
+        Institute of Artificial Intelligence, Beihang University, advised by Prof. Si Liu.
+        Before that, I received my B.S. in Automation (Pattern Recognition) from Beihang University,
+        ranking in the top 5% of my class.
+      </p>
+      <p class="hero-lede">
+        My research asks how multimodal models can <em>keep up with the world as it unfolds</em>:
+        maintaining and updating an internal world state over continuous video streams, and reasoning
+        over long-horizon visual evidence without losing grounding. I build benchmarks and agents for
+        streaming and long-form video understanding.
+      </p>
+      <ul class="hero-contacts">
+        <li><span class="label">Email</span> <a href="mailto:buaaplay@gmail.com">buaaplay@gmail.com</a></li>
+        <li><span class="label">GitHub</span> <a href="https://github.com/buaaplay" rel="noopener">github.com/buaaplay</a></li>
+      </ul>
+    </div>
+    <figure class="hero-photo" data-anim>
+      <img src="assets/photo.png" alt="Portrait of Pengyiang Liu" width="280" />
+    </figure>
+  </section>
+
+  <section class="news" data-anim>
+    <h2>News</h2>
+    <ul class="news-list">
+      <li><span class="news-date">2026.06</span> SVCBench is accepted to <strong>ECCV 2026</strong>.</li>
+      <li><span class="news-date">2026.06</span> OVO-S-Bench is released on arXiv and under review.</li>
+      <li><span class="news-date">2026.02</span> I join Shanghai AI Laboratory as a research intern.</li>
+      <li><span class="news-date">2025.09</span> I start my master's at CoLab, Beihang University.</li>
+    </ul>
+  </section>
+
+  <section class="pubs" id="publications">
+    <h2 data-anim>Publications</h2>
+    <p class="pubs-note" data-anim>* denotes equal contribution.</p>
+
+    <article class="pub" data-anim>
+      <figure class="pub-fig">
+        <img src="assets/svcbench.png" alt="SVCBench teaser: streaming counting queries along the video timeline" loading="lazy" />
+      </figure>
+      <div class="pub-body">
+        <p class="pub-venue">ECCV 2026</p>
+        <h3>SVCBench: A Streaming Video Counting Benchmark for Spatial-Temporal State Maintenance</h3>
+        <p class="pub-authors"><strong>Pengyiang Liu</strong>, Zhongyue Shi, Hongye Hao, Qi Fu, Xueting Bi, Siwei Zhang, Xiaoyang Hu, Zitian Wang, Linjiang Huang, Si Liu</p>
+        <p class="pub-desc">
+          Repositions counting as a minimal, deterministically verifiable probe for how models maintain
+          world state during video playback. 406 videos, 1,000 streaming QA pairs, and 4,576 timeline
+          query points across 8 subcategories reveal that current multimodal LLMs nearly fail on
+          long-horizon state maintenance such as periodic event counting.
+        </p>
+        <p class="pub-links">
+          <a href="https://buaa-colalab.github.io/SVCBench/" rel="noopener">Project Page</a>
+          <a href="https://github.com/buaa-colalab/SVCBench" rel="noopener">Code</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="pub" data-anim>
+      <figure class="pub-fig">
+        <img src="assets/ovos.png" alt="OVO-S-Bench overview: four levels of streaming spatial intelligence" loading="lazy" />
+      </figure>
+      <div class="pub-body">
+        <p class="pub-venue">Preprint, under review</p>
+        <h3>OVO-S-Bench: A Hierarchical Benchmark for Streaming Spatial Intelligence in Multimodal LLMs</h3>
+        <p class="pub-authors">Yifei Li*, <strong>Pengyiang Liu*</strong>, Yuhang Zang, Zhongyue Shi, Qi Fu, Hongye Hao, Jiwen Lu</p>
+        <p class="pub-desc">
+          Constrains models to the video prefix available at query time and evaluates streaming spatial
+          intelligence across four levels, from instantaneous egocentric perception to global topological
+          mapping. Mapping the environment topology emerges as the dominant bottleneck, with frontier
+          models far behind humans.
+        </p>
+        <p class="pub-links">
+          <a href="https://internlm.github.io/OVO-S-Bench/" rel="noopener">Project Page</a>
+          <a href="https://arxiv.org/abs/2606.03890" rel="noopener">arXiv</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="pub" data-anim>
+      <figure class="pub-fig">
+        <img src="assets/trace.png" alt="TRACE architecture: evidence closure loop over anchored visual evidence" loading="lazy" />
+      </figure>
+      <div class="pub-body">
+        <p class="pub-venue">Under review</p>
+        <h3>TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding</h3>
+        <p class="pub-authors"><strong>Pengyiang Liu</strong>, et al.</p>
+        <p class="pub-desc">
+          A long-video reasoning agent that keeps the answer path grounded in raw visual clips instead of
+          text summaries. Evidence is organized as anchored, growing trajectories, and a trajectory
+          reconciler decides when to stop by checking answer convergence, addressing the "when to stop"
+          problem in long-horizon reasoning. Ships with VES-Bench, an evidence-coverage audit benchmark.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section class="experience" id="experience" data-anim>
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li>
+        <span class="tl-when">2026.02 - 2026.05</span>
+        <div class="tl-what">
+          <h3>Shanghai AI Laboratory</h3>
+          <p>Research intern, multimodal video understanding. Led the construction of OVO-S-Bench for streaming spatial intelligence evaluation.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tl-when">2025.07 - 2026.01</span>
+        <div class="tl-what">
+          <h3>Meituan</h3>
+          <p>Research intern, multimodal video understanding. Led the construction of SVCBench for streaming state-maintenance evaluation (ECCV 2026).</p>
+        </div>
+      </li>
+      <li>
+        <span class="tl-when">2025.09 - present</span>
+        <div class="tl-what">
+          <h3>CoLab, Institute of Artificial Intelligence, Beihang University</h3>
+          <p>M.S. student in Artificial Intelligence, advised by Prof. Si Liu.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tl-when">2021.09 - 2025.07</span>
+        <div class="tl-what">
+          <h3>Beihang University</h3>
+          <p>B.S. in Automation (Pattern Recognition), top 5% overall ranking.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="awards" id="awards" data-anim>
+    <h2>Selected Awards</h2>
+    <ul class="award-list">
+      <li><span class="award-year">2025</span> BUAA Outstanding Graduate; Merit Student; Outstanding Student Leader</li>
+      <li><span class="award-year">2024</span> BUAA Academic Competition Scholarship, Grand Prize; SMC Scholarship, First Prize</li>
+      <li><span class="award-year">2024</span> China Algorithm Elite Competition, First Prize (Beijing Division, first author)</li>
+      <li><span class="award-year">2023</span> China Intelligent Robot Creativity Competition, First Prize (first author); National College Mathematics Competition, First Prize</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Pengyiang Liu · CoLab, Institute of Artificial Intelligence, Beihang University</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="main.js?v=1" defer></script>
+</body>
+</html>
