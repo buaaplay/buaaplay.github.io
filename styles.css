@@ -62,10 +62,10 @@ body.lang-zh {
 
 /* ---------- hero ---------- */
 .hero {
-  display: flex; gap: 48px; align-items: flex-start;
+  display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;
   padding: 64px 0 48px;
 }
-.hero-text { flex: 1; }
+.hero-text { flex: 1; min-width: 0; }
 .hero-kicker {
   font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
@@ -81,12 +81,17 @@ body.lang-zh {
 .hero-lede { color: var(--ink-soft); margin-bottom: 14px; max-width: 56ch; }
 .hero-lede em { font-style: italic; color: var(--ink); }
 
-.hero-contacts { list-style: none; margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px 28px; }
+.hero-contacts {
+  list-style: none; margin-top: -20px;
+  display: flex; flex-wrap: nowrap; gap: 8px 28px;
+  width: 100%; flex-basis: 100%;
+  align-items: baseline;
+}
 .hero-contacts .label {
   font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase;
   letter-spacing: 0.06em; color: var(--ink-faint); margin-right: 6px;
 }
-.hero-contacts li { font-size: 0.92rem; }
+.hero-contacts li { font-size: 0.92rem; white-space: nowrap; }
 
 .hero-photo { flex-shrink: 0; align-self: center; }
 .hero-photo img {
@@ -169,7 +174,9 @@ body.lang-zh {
   .nav-links { gap: 12px; flex-wrap: wrap; }
   .nav-links a { font-size: 0.82rem; }
   .news-list li { flex-direction: column; gap: 0; }
-  .hero-contacts { flex-direction: column; gap: 6px; }
+  .hero-contacts {
+    margin-top: 4px; flex-wrap: wrap; gap: 6px 20px;
+  }
 }
 
 body { overflow-x: hidden; }
