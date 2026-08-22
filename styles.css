@@ -132,6 +132,14 @@ body.lang-zh {
   font-family: var(--serif); font-size: 1.18rem; font-weight: 600;
   line-height: 1.35; margin-bottom: 8px;
 }
+.pub-acronym {
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.pub h3 .acro {
+  color: var(--accent);
+  font-weight: 700;
+}
 .pub-authors { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 10px; }
 .pub-authors strong { color: var(--ink); }
 .pub-desc { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 12px; }
