@@ -124,8 +124,9 @@ body.lang-zh {
   border: 1px solid var(--hairline); background: #fff; padding: 8px;
 }
 .pub-venue {
-  font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.07em;
-  text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+  font-family: var(--mono); font-size: 0.86rem; font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
 }
 .pub h3 {
   font-family: var(--serif); font-size: 1.18rem; font-weight: 600;
