@@ -30,7 +30,7 @@
     'exp-bs-when': '2021.09 - 2025.07',
     'exp-bs-name': '北京航空航天大学',
     'exp-bs-role': '本科 · 自动化（模式识别方向）',
-    'footer': '刘彭逸昂 · 北京航空航天大学人工智能学院 <a href="https://colalab.net" rel="noopener">CoLab 实验室</a>'
+    'footer': '刘彭逸昂（Pengyiang Liu） · 北京航空航天大学人工智能学院 <a href="https://colalab.net" rel="noopener">CoLab 实验室</a>'
   };
 
   var enCache = {};
