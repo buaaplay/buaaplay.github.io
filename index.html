@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
   <link rel="icon" type="image/png" href="assets/colab-logo.png" />
 </head>
 <body>
@@ -92,7 +92,6 @@
     <ul class="news-list">
       <li><span class="news-date">2026.06</span> <span data-i18n="news-1">SVCBench is accepted to <strong>ECCV 2026</strong>.</span></li>
       <li><span class="news-date">2026.08</span> <span data-i18n="news-2">OVO-S-Bench and TRACE are accepted to <strong>EMNLP 2026</strong> Main.</span></li>
-      <li><span class="news-date">2026.09</span> <span data-i18n="news-3">Two new papers are now available on <strong>arXiv</strong>.</span></li>
     </ul>
   </section>
 
@@ -165,7 +164,11 @@
         <img src="assets/ovos.png" alt="OVO-S-Bench overview: four levels of streaming spatial intelligence" loading="lazy" />
       </figure>
       <div class="pub-body">
-        <p class="pub-venue" data-i18n="ovos-venue">EMNLP 2026 Main · Oral · Outstanding Award Nominee</p>
+        <p class="pub-venue">
+          <span class="pub-venue-main" data-i18n="ovos-venue">EMNLP 2026 Main</span>
+          <span class="pub-tag pub-tag-oral" data-i18n="oral-label">Oral</span>
+          <span class="pub-tag pub-tag-award" data-i18n="award-label">Outstanding Award Nominee</span>
+        </p>
         <h3><span class="pub-acronym">OVO-S-Bench</span>: A Hierarchical Benchmark for Streaming Spatial Intelligence in Multimodal LLMs</h3>
         <p class="pub-authors">Yifei Li*, <strong>Pengyiang Liu*</strong>, Yuhang Zang, Zhongyue Shi, Qi Fu, Hongye Hao, Jiwen Lu</p>
         <p class="pub-desc" data-i18n="ovos-desc">
@@ -187,7 +190,10 @@
         <img src="assets/trace.png?v=2" alt="TRACE architecture: evidence closure loop over anchored visual evidence" loading="lazy" />
       </figure>
       <div class="pub-body">
-        <p class="pub-venue" data-i18n="trace-venue">EMNLP 2026 Main · Oral</p>
+        <p class="pub-venue">
+          <span class="pub-venue-main" data-i18n="trace-venue">EMNLP 2026 Main</span>
+          <span class="pub-tag pub-tag-oral" data-i18n="oral-label">Oral</span>
+        </p>
         <h3><span class="pub-acronym">TRACE</span>: <span class="acro">T</span>emporal <span class="acro">R</span>etrieval with <span class="acro">A</span>nchored and <span class="acro">C</span>onvergent <span class="acro">E</span>vidence for Long-Horizon Video Understanding</h3>
         <p class="pub-authors"><strong>Pengyiang Liu*</strong>, Junbo Niu*, Xiaoyang Hu, Zhongyue Shi, Zitian Wang, Linjiang Huang, Si Liu</p>
         <p class="pub-desc" data-i18n="trace-desc">
@@ -247,6 +253,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=8" defer></script>
+<script src="main.js?v=9" defer></script>
 </body>
 </html>

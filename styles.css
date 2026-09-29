@@ -5,6 +5,9 @@
   --ink-faint: #8C897F;
   --accent: #1F3A5F;
   --hairline: #E3E0D8;
+  --award: #9A5A00;
+  --award-bg: #FFF4D6;
+  --award-line: #E8C36A;
   --serif: "Spectral", Georgia, serif;
   --sans: "Geist", -apple-system, "Helvetica Neue", sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", monospace;
@@ -96,17 +99,23 @@ body.lang-zh {
 .hero-photo { flex-shrink: 0; align-self: center; }
 .hero-photo img {
   width: 320px; height: auto; display: block;
-  border: 1px solid var(--hairline);
+  border: 1px solid var(--hairline); border-radius: 12px;
+  box-shadow: 0 14px 32px rgba(28,27,24,0.08);
 }
 
 /* ---------- news ---------- */
 .news { padding: 36px 0; border-top: 1px solid var(--hairline); }
 .news-list { list-style: none; margin-top: 14px; }
 .news-list li {
-  padding: 7px 0; font-size: 0.95rem; color: var(--ink-soft);
+  padding: 8px 0; font-size: 0.95rem; color: var(--ink-soft);
   display: flex; gap: 18px; align-items: baseline;
 }
-.news-date { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-faint); flex-shrink: 0; width: 60px; }
+.news-date {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 62px; padding: 2px 7px; border: 1px solid var(--hairline);
+  border-radius: 999px; background: #F7F5F0;
+  font-family: var(--mono); font-size: 0.74rem; color: var(--ink-faint); flex-shrink: 0;
+}
 .news-list strong { color: var(--accent); font-weight: 600; }
 
 /* ---------- publications ---------- */
@@ -115,18 +124,42 @@ body.lang-zh {
 
 .pub {
   display: grid; grid-template-columns: 300px 1fr; gap: 32px;
-  padding: 30px 0; border-top: 1px solid var(--hairline);
+  padding: 26px; margin: 16px 0;
+  border: 1px solid var(--hairline); border-radius: 14px;
+  background: rgba(255,255,255,0.62);
+  box-shadow: 0 8px 24px rgba(28,27,24,0.035);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-.pub:first-of-type { border-top: none; }
+.pub:hover {
+  border-color: #C9C3B7;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 12px 30px rgba(28,27,24,0.075);
+}
 .pub-fig { align-self: center; }
 .pub-fig img {
   width: 100%; height: auto; display: block;
-  border: 1px solid var(--hairline); background: #fff; padding: 8px;
+  border: 1px solid var(--hairline); border-radius: 9px;
+  background: #fff; padding: 7px;
 }
 .pub-venue {
-  font-family: var(--mono); font-size: 0.86rem; font-weight: 600;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 0.8rem; font-weight: 600;
   letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 10px;
+  color: var(--accent); margin-bottom: 12px;
+}
+.pub-venue-main { line-height: 1.5; }
+.pub-tag {
+  display: inline-flex; align-items: center;
+  padding: 3px 8px; border: 1px solid transparent; border-radius: 999px;
+  font-family: var(--mono); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.06em; line-height: 1.35; text-transform: none;
+}
+.pub-tag-oral {
+  color: #1C5D73; background: #EAF4F7; border-color: #B9DCE5;
+}
+.pub-tag-award {
+  color: var(--award); background: var(--award-bg); border-color: var(--award-line);
+  box-shadow: 0 1px 0 rgba(154,90,0,0.08);
 }
 .pub h3 {
   font-family: var(--serif);
@@ -155,7 +188,12 @@ body.lang-zh {
 .pub-authors strong { color: var(--ink); }
 .pub-desc { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 12px; }
 .pub-links { display: flex; gap: 18px; font-size: 0.88rem; }
-.pub-links a { font-family: var(--mono); font-size: 0.8rem; }
+.pub-links a {
+  padding: 3px 7px; border: 1px solid transparent; border-radius: 4px;
+  font-family: var(--mono); font-size: 0.8rem;
+  background: #F5F3EE;
+}
+.pub-links a:hover { border-color: var(--accent); background: #fff; }
 
 /* ---------- experience ---------- */
 .experience { padding: 44px 0 56px; border-top: 1px solid var(--hairline); }
@@ -189,7 +227,7 @@ body.lang-zh {
   .hero { flex-direction: column; gap: 28px; padding-top: 40px; }
   .hero-photo img { width: 100%; }
   .hero h1 { font-size: 2.1rem; }
-  .pub { grid-template-columns: 1fr; gap: 16px; }
+  .pub { grid-template-columns: 1fr; gap: 16px; padding: 18px; margin: 12px 0; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
   .nav-links { gap: 12px; flex-wrap: wrap; }
   .nav-links a { font-size: 0.82rem; }
