@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=15" />
   <link rel="icon" type="image/png" href="assets/colab-logo.png" />
 </head>
 <body>
@@ -100,10 +100,34 @@
     <h2 data-anim data-i18n="pubs-title">Publications</h2>
     <p class="pubs-note" data-anim data-i18n="pubs-note">* denotes equal contribution.</p>
 
-    <div class="pub-group-title" data-anim>
-      <h3 data-i18n="pubs-conference-title">Conference papers</h3>
-      <p data-i18n="pubs-conference-note">Accepted papers and highlighted conference results.</p>
-    </div>
+    <article class="pub" data-anim>
+      <figure class="pub-fig pub-fig-stack">
+        <div class="pub-fig-panel">
+          <img src="assets/svcbench.png" alt="SVCBench overview: process-level streaming counting evaluation" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
+        </div>
+        <div class="pub-fig-panel">
+          <img src="assets/svcbench-fig2.png" alt="SVCBench taxonomy: object and event counting categories" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-taxonomy">Taxonomy</span>
+        </div>
+      </figure>
+      <div class="pub-body">
+        <p class="pub-venue">ECCV 2026</p>
+        <h3><span class="pub-acronym">SVCBench</span>: A <span class="acro">S</span>treaming <span class="acro">V</span>ideo <span class="acro">C</span>ounting Benchmark for Spatial-Temporal State Maintenance</h3>
+        <p class="pub-authors"><strong>Pengyiang Liu</strong>, Zhongyue Shi, Hongye Hao, Qi Fu, Xueting Bi, Siwei Zhang, Xiaoyang Hu, Zitian Wang, Linjiang Huang, Si Liu</p>
+        <p class="pub-desc" data-i18n="svc-desc">
+          Repositions counting as a minimal, deterministically verifiable probe for how models maintain
+          world state during video playback. 406 videos, 1,000 streaming QA pairs, and 4,576 timeline
+          query points across 8 subcategories reveal that current multimodal LLMs nearly fail on
+          long-horizon state maintenance such as periodic event counting.
+        </p>
+        <p class="pub-links">
+          <a href="https://buaa-colalab.github.io/SVCBench/" rel="noopener" data-i18n="link-project">Project Page</a>
+          <a href="https://arxiv.org/abs/2603.12703" rel="noopener">arXiv</a>
+          <a href="https://github.com/buaa-colalab/SVCBench" rel="noopener" data-i18n="link-code">Code</a>
+        </p>
+      </div>
+    </article>
 
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
@@ -173,35 +197,28 @@
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
         <div class="pub-fig-panel">
-          <img src="assets/svcbench.png" alt="SVCBench overview: process-level streaming counting evaluation" loading="lazy" />
+          <img src="assets/stamina.png" alt="StaMina overview: maintaining counting state as a video scene changes" loading="lazy" />
           <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
         </div>
         <div class="pub-fig-panel">
-          <img src="assets/svcbench-fig2.png" alt="SVCBench teaser: current-state and identity-tracking queries over a video timeline" loading="lazy" />
-          <span class="pub-fig-label" data-i18n="fig-teaser">Teaser</span>
+          <img src="assets/stamina-fig2.png" alt="StaMina method: state-conditioned transition and count-path learning" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-method">Method</span>
         </div>
       </figure>
       <div class="pub-body">
-        <p class="pub-venue">ECCV 2026</p>
-        <h3><span class="pub-acronym">SVCBench</span>: A <span class="acro">S</span>treaming <span class="acro">V</span>ideo <span class="acro">C</span>ounting Benchmark for Spatial-Temporal State Maintenance</h3>
-        <p class="pub-authors"><strong>Pengyiang Liu</strong>, Zhongyue Shi, Hongye Hao, Qi Fu, Xueting Bi, Siwei Zhang, Xiaoyang Hu, Zitian Wang, Linjiang Huang, Si Liu</p>
-        <p class="pub-desc" data-i18n="svc-desc">
-          Repositions counting as a minimal, deterministically verifiable probe for how models maintain
-          world state during video playback. 406 videos, 1,000 streaming QA pairs, and 4,576 timeline
-          query points across 8 subcategories reveal that current multimodal LLMs nearly fail on
-          long-horizon state maintenance such as periodic event counting.
+        <p class="pub-venue">arXiv 2026</p>
+        <h3><span class="pub-acronym">StaMina</span>: When Should the Count Change? Learning State Maintenance for Causal Video Counting</h3>
+        <p class="pub-authors"><strong>Pengyiang Liu</strong>, Dongyue Lyu, Junbo Niu, Zhongyue Shi, Jiahao Xie, Si Liu</p>
+        <p class="pub-desc" data-i18n="stamina-desc">
+          Learns state-conditioned updates for continuous video counting, separating visual recognition from
+          the maintenance of visibility, persistent identities, and completed-event records. A differentiable
+          recurrence organizes spatial queries and event annotations into count trajectories.
         </p>
         <p class="pub-links">
-          <a href="https://buaa-colalab.github.io/SVCBench/" rel="noopener" data-i18n="link-project">Project Page</a>
-          <a href="https://arxiv.org/abs/2603.12703" rel="noopener">arXiv</a>
-          <a href="https://github.com/buaa-colalab/SVCBench" rel="noopener" data-i18n="link-code">Code</a>
+          <a href="https://arxiv.org/abs/2609.35416" rel="noopener">arXiv</a>
         </p>
       </div>
     </article>
-    <div class="pub-group-title pub-group-title-secondary" data-anim>
-      <h3 data-i18n="pubs-preprint-title">Recent arXiv preprints</h3>
-      <p data-i18n="pubs-preprint-note">New work available as arXiv papers.</p>
-    </div>
 
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
@@ -225,32 +242,6 @@
         </p>
         <p class="pub-links">
           <a href="https://arxiv.org/abs/2609.35439" rel="noopener">arXiv</a>
-        </p>
-      </div>
-    </article>
-
-    <article class="pub" data-anim>
-      <figure class="pub-fig pub-fig-stack">
-        <div class="pub-fig-panel">
-          <img src="assets/stamina.png" alt="StaMina overview: maintaining counting state as a video scene changes" loading="lazy" />
-          <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
-        </div>
-        <div class="pub-fig-panel">
-          <img src="assets/stamina-fig2.png" alt="StaMina method: state-conditioned transition and count-path learning" loading="lazy" />
-          <span class="pub-fig-label" data-i18n="fig-method">Method</span>
-        </div>
-      </figure>
-      <div class="pub-body">
-        <p class="pub-venue">arXiv 2026</p>
-        <h3><span class="pub-acronym">StaMina</span>: When Should the Count Change? Learning State Maintenance for Causal Video Counting</h3>
-        <p class="pub-authors"><strong>Pengyiang Liu</strong>, Dongyue Lyu, Junbo Niu, Zhongyue Shi, Jiahao Xie, Si Liu</p>
-        <p class="pub-desc" data-i18n="stamina-desc">
-          Learns state-conditioned updates for continuous video counting, separating visual recognition from
-          the maintenance of visibility, persistent identities, and completed-event records. A differentiable
-          recurrence organizes spatial queries and event annotations into count trajectories.
-        </p>
-        <p class="pub-links">
-          <a href="https://arxiv.org/abs/2609.35416" rel="noopener">arXiv</a>
         </p>
       </div>
     </article>
@@ -298,6 +289,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=11" defer></script>
+<script src="main.js?v=12" defer></script>
 </body>
 </html>
