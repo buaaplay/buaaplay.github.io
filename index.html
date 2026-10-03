@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <link rel="icon" type="image/png" href="assets/colab-logo.png" />
 </head>
 <body>
@@ -100,6 +100,109 @@
     <h2 data-anim data-i18n="pubs-title">Publications</h2>
     <p class="pubs-note" data-anim data-i18n="pubs-note">* denotes equal contribution.</p>
 
+    <div class="pub-group-title" data-anim>
+      <h3 data-i18n="pubs-conference-title">Conference papers</h3>
+      <p data-i18n="pubs-conference-note">Accepted papers and highlighted conference results.</p>
+    </div>
+
+    <article class="pub" data-anim>
+      <figure class="pub-fig pub-fig-stack">
+        <div class="pub-fig-panel">
+          <img src="assets/ovos.png" alt="OVO-S-Bench overview: four levels of streaming spatial intelligence" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
+        </div>
+        <div class="pub-fig-panel">
+          <img src="assets/ovos-fig2.png" alt="OVO-S-Bench taxonomy examples across four levels of spatial understanding" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-taxonomy">Taxonomy</span>
+        </div>
+      </figure>
+      <div class="pub-body">
+        <p class="pub-venue">
+          <span class="pub-venue-main" data-i18n="ovos-venue">EMNLP 2026 Main</span>
+          <span class="pub-tag pub-tag-oral" data-i18n="oral-label">Oral</span>
+          <span class="pub-tag pub-tag-award" data-i18n="award-label">Outstanding Award Nominee</span>
+        </p>
+        <h3><span class="pub-acronym">OVO-S-Bench</span>: A Hierarchical Benchmark for Streaming Spatial Intelligence in Multimodal LLMs</h3>
+        <p class="pub-authors">Yifei Li*, <strong>Pengyiang Liu*</strong>, Yuhang Zang, Zhongyue Shi, Qi Fu, Hongye Hao, Jiwen Lu</p>
+        <p class="pub-desc" data-i18n="ovos-desc">
+          Constrains models to the video prefix available at query time and evaluates streaming spatial
+          intelligence across four levels, from instantaneous egocentric perception to global topological
+          mapping. Mapping the environment topology emerges as the dominant bottleneck, with frontier
+          models far behind humans.
+        </p>
+        <p class="pub-links">
+          <a href="https://internlm.github.io/OVO-S-Bench/" rel="noopener" data-i18n="link-project">Project Page</a>
+          <a href="https://arxiv.org/abs/2606.03890" rel="noopener">arXiv</a>
+          <a href="https://github.com/InternLM/OVO-S-Bench" rel="noopener" data-i18n="link-code">Code</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="pub" data-anim>
+      <figure class="pub-fig pub-fig-stack">
+        <div class="pub-fig-panel">
+          <img src="assets/trace.png?v=2" alt="TRACE overview: evidence closure loop over anchored visual evidence" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
+        </div>
+        <div class="pub-fig-panel">
+          <img src="assets/trace-fig2.png" alt="TRACE method: evidence growth trajectory and trajectory reconciliation" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-method">Method</span>
+        </div>
+      </figure>
+      <div class="pub-body">
+        <p class="pub-venue">
+          <span class="pub-venue-main" data-i18n="trace-venue">EMNLP 2026 Main</span>
+          <span class="pub-tag pub-tag-oral" data-i18n="oral-label">Oral</span>
+        </p>
+        <h3><span class="pub-acronym">TRACE</span>: <span class="acro">T</span>emporal <span class="acro">R</span>etrieval with <span class="acro">A</span>nchored and <span class="acro">C</span>onvergent <span class="acro">E</span>vidence for Long-Horizon Video Understanding</h3>
+        <p class="pub-authors"><strong>Pengyiang Liu*</strong>, Junbo Niu*, Xiaoyang Hu, Zhongyue Shi, Zitian Wang, Linjiang Huang, Si Liu</p>
+        <p class="pub-desc" data-i18n="trace-desc">
+          A long-video reasoning agent that keeps the answer path grounded in raw visual clips instead of
+          text summaries. Evidence is organized as anchored, growing trajectories, and a trajectory
+          reconciler decides when to stop by checking answer convergence, addressing the "when to stop"
+          problem in long-horizon reasoning. Ships with VES-Bench, an evidence-coverage audit benchmark.
+        </p>
+        <p class="pub-links">
+          <a href="https://buaa-colalab.github.io/TRACE/" rel="noopener" data-i18n="link-project">Project Page</a>
+          <a href="https://arxiv.org/abs/2608.22516" rel="noopener">arXiv</a>
+          <a href="https://github.com/buaa-colalab/TRACE" rel="noopener" data-i18n="link-code">Code</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="pub" data-anim>
+      <figure class="pub-fig pub-fig-stack">
+        <div class="pub-fig-panel">
+          <img src="assets/svcbench.png" alt="SVCBench overview: process-level streaming counting evaluation" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
+        </div>
+        <div class="pub-fig-panel">
+          <img src="assets/svcbench-fig2.png" alt="SVCBench teaser: current-state and identity-tracking queries over a video timeline" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-teaser">Teaser</span>
+        </div>
+      </figure>
+      <div class="pub-body">
+        <p class="pub-venue">ECCV 2026</p>
+        <h3><span class="pub-acronym">SVCBench</span>: A <span class="acro">S</span>treaming <span class="acro">V</span>ideo <span class="acro">C</span>ounting Benchmark for Spatial-Temporal State Maintenance</h3>
+        <p class="pub-authors"><strong>Pengyiang Liu</strong>, Zhongyue Shi, Hongye Hao, Qi Fu, Xueting Bi, Siwei Zhang, Xiaoyang Hu, Zitian Wang, Linjiang Huang, Si Liu</p>
+        <p class="pub-desc" data-i18n="svc-desc">
+          Repositions counting as a minimal, deterministically verifiable probe for how models maintain
+          world state during video playback. 406 videos, 1,000 streaming QA pairs, and 4,576 timeline
+          query points across 8 subcategories reveal that current multimodal LLMs nearly fail on
+          long-horizon state maintenance such as periodic event counting.
+        </p>
+        <p class="pub-links">
+          <a href="https://buaa-colalab.github.io/SVCBench/" rel="noopener" data-i18n="link-project">Project Page</a>
+          <a href="https://arxiv.org/abs/2603.12703" rel="noopener">arXiv</a>
+          <a href="https://github.com/buaa-colalab/SVCBench" rel="noopener" data-i18n="link-code">Code</a>
+        </p>
+      </div>
+    </article>
+    <div class="pub-group-title pub-group-title-secondary" data-anim>
+      <h3 data-i18n="pubs-preprint-title">Recent arXiv preprints</h3>
+      <p data-i18n="pubs-preprint-note">New work available as arXiv papers.</p>
+    </div>
+
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
         <div class="pub-fig-panel">
@@ -113,7 +216,7 @@
       </figure>
       <div class="pub-body">
         <p class="pub-venue">arXiv 2026</p>
-        <h3><span class="pub-acronym">RTP</span>: Revisable Visual Plans for Closed-Loop World–Action Models</h3>
+        <h3><span class="pub-acronym">RTP</span>: Revisable Visual Plans for Closed-Loop World-Action Models</h3>
         <p class="pub-authors"><strong>Pengyiang Liu</strong>, Junbo Niu, Wenhao Zheng, Xinchen Chen, Canyu Li, Zhongyue Shi, Jiahao Xie, Si Liu</p>
         <p class="pub-desc" data-i18n="rtp-desc">
           Maintains a visual future as a persistent action condition and revises it after execution feedback.
@@ -148,79 +251,6 @@
         </p>
         <p class="pub-links">
           <a href="https://arxiv.org/abs/2609.35416" rel="noopener">arXiv</a>
-        </p>
-      </div>
-    </article>
-
-    <article class="pub" data-anim>
-      <figure class="pub-fig">
-        <img src="assets/svcbench.png" alt="SVCBench teaser: streaming counting queries along the video timeline" loading="lazy" />
-      </figure>
-      <div class="pub-body">
-        <p class="pub-venue">ECCV 2026</p>
-        <h3><span class="pub-acronym">SVCBench</span>: A <span class="acro">S</span>treaming <span class="acro">V</span>ideo <span class="acro">C</span>ounting Benchmark for Spatial-Temporal State Maintenance</h3>
-        <p class="pub-authors"><strong>Pengyiang Liu</strong>, Zhongyue Shi, Hongye Hao, Qi Fu, Xueting Bi, Siwei Zhang, Xiaoyang Hu, Zitian Wang, Linjiang Huang, Si Liu</p>
-        <p class="pub-desc" data-i18n="svc-desc">
-          Repositions counting as a minimal, deterministically verifiable probe for how models maintain
-          world state during video playback. 406 videos, 1,000 streaming QA pairs, and 4,576 timeline
-          query points across 8 subcategories reveal that current multimodal LLMs nearly fail on
-          long-horizon state maintenance such as periodic event counting.
-        </p>
-        <p class="pub-links">
-          <a href="https://buaa-colalab.github.io/SVCBench/" rel="noopener" data-i18n="link-project">Project Page</a>
-          <a href="https://arxiv.org/abs/2603.12703" rel="noopener">arXiv</a>
-          <a href="https://github.com/buaa-colalab/SVCBench" rel="noopener" data-i18n="link-code">Code</a>
-        </p>
-      </div>
-    </article>
-
-    <article class="pub" data-anim>
-      <figure class="pub-fig">
-        <img src="assets/ovos.png" alt="OVO-S-Bench overview: four levels of streaming spatial intelligence" loading="lazy" />
-      </figure>
-      <div class="pub-body">
-        <p class="pub-venue">
-          <span class="pub-venue-main" data-i18n="ovos-venue">EMNLP 2026 Main</span>
-          <span class="pub-tag pub-tag-oral" data-i18n="oral-label">Oral</span>
-          <span class="pub-tag pub-tag-award" data-i18n="award-label">Outstanding Award Nominee</span>
-        </p>
-        <h3><span class="pub-acronym">OVO-S-Bench</span>: A Hierarchical Benchmark for Streaming Spatial Intelligence in Multimodal LLMs</h3>
-        <p class="pub-authors">Yifei Li*, <strong>Pengyiang Liu*</strong>, Yuhang Zang, Zhongyue Shi, Qi Fu, Hongye Hao, Jiwen Lu</p>
-        <p class="pub-desc" data-i18n="ovos-desc">
-          Constrains models to the video prefix available at query time and evaluates streaming spatial
-          intelligence across four levels, from instantaneous egocentric perception to global topological
-          mapping. Mapping the environment topology emerges as the dominant bottleneck, with frontier
-          models far behind humans.
-        </p>
-        <p class="pub-links">
-          <a href="https://internlm.github.io/OVO-S-Bench/" rel="noopener" data-i18n="link-project">Project Page</a>
-          <a href="https://arxiv.org/abs/2606.03890" rel="noopener">arXiv</a>
-          <a href="https://github.com/InternLM/OVO-S-Bench" rel="noopener" data-i18n="link-code">Code</a>
-        </p>
-      </div>
-    </article>
-
-    <article class="pub" data-anim>
-      <figure class="pub-fig">
-        <img src="assets/trace.png?v=2" alt="TRACE architecture: evidence closure loop over anchored visual evidence" loading="lazy" />
-      </figure>
-      <div class="pub-body">
-        <p class="pub-venue">
-          <span class="pub-venue-main" data-i18n="trace-venue">EMNLP 2026 Main</span>
-          <span class="pub-tag pub-tag-oral" data-i18n="oral-label">Oral</span>
-        </p>
-        <h3><span class="pub-acronym">TRACE</span>: <span class="acro">T</span>emporal <span class="acro">R</span>etrieval with <span class="acro">A</span>nchored and <span class="acro">C</span>onvergent <span class="acro">E</span>vidence for Long-Horizon Video Understanding</h3>
-        <p class="pub-authors"><strong>Pengyiang Liu*</strong>, Junbo Niu*, Xiaoyang Hu, Zhongyue Shi, Zitian Wang, Linjiang Huang, Si Liu</p>
-        <p class="pub-desc" data-i18n="trace-desc">
-          A long-video reasoning agent that keeps the answer path grounded in raw visual clips instead of
-          text summaries. Evidence is organized as anchored, growing trajectories, and a trajectory
-          reconciler decides when to stop by checking answer convergence, addressing the "when to stop"
-          problem in long-horizon reasoning. Ships with VES-Bench, an evidence-coverage audit benchmark.
-        </p>
-        <p class="pub-links">
-          <a href="https://buaa-colalab.github.io/TRACE/" rel="noopener" data-i18n="link-project">Project Page</a>
-          <a href="https://arxiv.org/abs/2608.22516" rel="noopener">arXiv</a>
-          <a href="https://github.com/buaa-colalab/TRACE" rel="noopener" data-i18n="link-code">Code</a>
         </p>
       </div>
     </article>
@@ -268,6 +298,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=10" defer></script>
+<script src="main.js?v=11" defer></script>
 </body>
 </html>

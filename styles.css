@@ -122,6 +122,16 @@ body.lang-zh {
 /* ---------- publications ---------- */
 .pubs { padding: 44px 0 40px; border-top: 1px solid var(--hairline); }
 .pubs-note { font-size: 0.85rem; color: var(--ink-faint); margin-bottom: 26px; }
+.pub-group-title {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+  padding: 10px 0 4px; border-top: 1px solid var(--hairline);
+}
+.pub-group-title h3 {
+  font-family: var(--serif); font-size: 1.12rem; font-weight: 600;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.pub-group-title p { font-size: 0.82rem; color: var(--ink-faint); }
+.pub-group-title-secondary { margin-top: 34px; }
 
 .pub {
   display: grid; grid-template-columns: 300px 1fr; gap: 32px;
@@ -242,6 +252,8 @@ body.lang-zh {
   .nav-links { gap: 12px; flex-wrap: wrap; }
   .nav-links a { font-size: 0.82rem; }
   .news-list li { flex-direction: column; gap: 0; }
+  .pub-group-title { display: block; }
+  .pub-group-title p { margin-top: 2px; }
   .hero-contacts {
     margin-top: 4px; flex-wrap: wrap; gap: 6px 20px;
   }
