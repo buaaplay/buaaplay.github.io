@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=13" />
   <link rel="icon" type="image/png" href="assets/colab-logo.png" />
 </head>
 <body>
@@ -92,6 +92,7 @@
     <ul class="news-list">
       <li><span class="news-date">2026.06</span> <span data-i18n="news-1">SVCBench is accepted to <strong>ECCV 2026</strong>.</span></li>
       <li><span class="news-date">2026.08</span> <span data-i18n="news-2">OVO-S-Bench and TRACE are accepted to <strong>EMNLP 2026</strong> Main.</span></li>
+      <li><span class="news-date">2026.09</span> <span data-i18n="news-3">TRACE and OVO-S-Bench are selected for <strong>EMNLP 2026 Oral</strong>; OVO-S-Bench receives an <strong class="news-award">Outstanding Award</strong> nomination.</span></li>
     </ul>
   </section>
 
@@ -100,8 +101,15 @@
     <p class="pubs-note" data-anim data-i18n="pubs-note">* denotes equal contribution.</p>
 
     <article class="pub" data-anim>
-      <figure class="pub-fig">
-        <img src="assets/rtp.png" alt="RTP overview: adaptive revision of visual plans after execution feedback" loading="lazy" />
+      <figure class="pub-fig pub-fig-stack">
+        <div class="pub-fig-panel">
+          <img src="assets/rtp.png" alt="RTP overview: adaptive revision of visual plans after execution feedback" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
+        </div>
+        <div class="pub-fig-panel">
+          <img src="assets/rtp-fig2.png" alt="RTP method: grounded facts and feedback-conditioned plan revision" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-method">Method</span>
+        </div>
       </figure>
       <div class="pub-body">
         <p class="pub-venue">arXiv 2026</p>
@@ -119,8 +127,15 @@
     </article>
 
     <article class="pub" data-anim>
-      <figure class="pub-fig">
-        <img src="assets/stamina.png" alt="StaMina overview: maintaining counting state as a video scene changes" loading="lazy" />
+      <figure class="pub-fig pub-fig-stack">
+        <div class="pub-fig-panel">
+          <img src="assets/stamina.png" alt="StaMina overview: maintaining counting state as a video scene changes" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
+        </div>
+        <div class="pub-fig-panel">
+          <img src="assets/stamina-fig2.png" alt="StaMina method: state-conditioned transition and count-path learning" loading="lazy" />
+          <span class="pub-fig-label" data-i18n="fig-method">Method</span>
+        </div>
       </figure>
       <div class="pub-body">
         <p class="pub-venue">arXiv 2026</p>
@@ -253,6 +268,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=9" defer></script>
+<script src="main.js?v=10" defer></script>
 </body>
 </html>
