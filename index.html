@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=16" />
   <link rel="icon" type="image/png" href="assets/colab-logo.png" />
 </head>
 <body>
@@ -103,11 +103,15 @@
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
         <div class="pub-fig-panel">
-          <img src="assets/svcbench.png" alt="SVCBench overview: process-level streaming counting evaluation" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/svcbench.png">
+            <img src="assets/svcbench.png" alt="SVCBench overview: process-level streaming counting evaluation" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
         </div>
         <div class="pub-fig-panel">
-          <img src="assets/svcbench-fig2.png" alt="SVCBench taxonomy: object and event counting categories" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/svcbench-taxonomy.png">
+            <img src="assets/svcbench-taxonomy.png" alt="SVCBench taxonomy: object and event counting categories" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-taxonomy">Taxonomy</span>
         </div>
       </figure>
@@ -132,11 +136,15 @@
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
         <div class="pub-fig-panel">
-          <img src="assets/ovos.png" alt="OVO-S-Bench overview: four levels of streaming spatial intelligence" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/ovos.png">
+            <img src="assets/ovos.png" alt="OVO-S-Bench overview: four levels of streaming spatial intelligence" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
         </div>
         <div class="pub-fig-panel">
-          <img src="assets/ovos-fig2.png" alt="OVO-S-Bench taxonomy examples across four levels of spatial understanding" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/ovos-fig2.png">
+            <img src="assets/ovos-fig2.png" alt="OVO-S-Bench taxonomy examples across four levels of spatial understanding" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-taxonomy">Taxonomy</span>
         </div>
       </figure>
@@ -165,11 +173,15 @@
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
         <div class="pub-fig-panel">
-          <img src="assets/trace.png?v=2" alt="TRACE overview: evidence closure loop over anchored visual evidence" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/trace.png">
+            <img src="assets/trace.png?v=2" alt="TRACE overview: evidence closure loop over anchored visual evidence" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
         </div>
         <div class="pub-fig-panel">
-          <img src="assets/trace-fig2.png" alt="TRACE method: evidence growth trajectory and trajectory reconciliation" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/trace-fig2.png">
+            <img src="assets/trace-fig2.png" alt="TRACE method: evidence growth trajectory and trajectory reconciliation" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-method">Method</span>
         </div>
       </figure>
@@ -197,11 +209,15 @@
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
         <div class="pub-fig-panel">
-          <img src="assets/stamina.png" alt="StaMina overview: maintaining counting state as a video scene changes" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/stamina.png">
+            <img src="assets/stamina.png" alt="StaMina overview: maintaining counting state as a video scene changes" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
         </div>
         <div class="pub-fig-panel">
-          <img src="assets/stamina-fig2.png" alt="StaMina method: state-conditioned transition and count-path learning" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/stamina-fig2.png">
+            <img src="assets/stamina-fig2.png?v=2" alt="StaMina method: state-conditioned transition and count-path learning" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-method">Method</span>
         </div>
       </figure>
@@ -223,11 +239,15 @@
     <article class="pub" data-anim>
       <figure class="pub-fig pub-fig-stack">
         <div class="pub-fig-panel">
-          <img src="assets/rtp.png" alt="RTP overview: adaptive revision of visual plans after execution feedback" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/rtp.png">
+            <img src="assets/rtp.png" alt="RTP overview: adaptive revision of visual plans after execution feedback" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-overview">Overview</span>
         </div>
         <div class="pub-fig-panel">
-          <img src="assets/rtp-fig2.png" alt="RTP method: grounded facts and feedback-conditioned plan revision" loading="lazy" />
+          <a class="pub-figure-link" href="assets/figures/rtp-fig2.png">
+            <img src="assets/rtp-fig2.png?v=2" alt="RTP method: grounded facts and feedback-conditioned plan revision" loading="lazy" />
+          </a>
           <span class="pub-fig-label" data-i18n="fig-method">Method</span>
         </div>
       </figure>
@@ -283,12 +303,26 @@
 
 </main>
 
+<dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+  <div class="lightbox-toolbar">
+    <p id="lightbox-caption"></p>
+    <div class="lightbox-controls">
+      <button id="lightbox-zoom" type="button" aria-pressed="false">Original size</button>
+      <a id="lightbox-original" target="_blank" rel="noopener" data-i18n="lightbox-original">Open image</a>
+      <button class="lightbox-close" type="button" data-i18n="lightbox-close">Close</button>
+    </div>
+  </div>
+  <div class="lightbox-viewport">
+    <img id="lightbox-image" alt="" />
+  </div>
+</dialog>
+
 <footer class="footer">
   <p data-i18n="footer">Pengyiang Liu（刘彭逸昂） · <a href="https://colalab.net" rel="noopener">CoLab</a>, Institute of Artificial Intelligence, Beihang University</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=12" defer></script>
+<script src="main.js?v=13" defer></script>
 </body>
 </html>

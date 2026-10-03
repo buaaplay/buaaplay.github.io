@@ -145,11 +145,44 @@ body.lang-zh {
   border-radius: 999px; background: rgba(28,27,24,0.7); color: #fff;
   font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em;
   line-height: 1.25;
+  pointer-events: none;
 }
 .pub-fig img {
   width: 100%; height: auto; display: block;
   border: 1px solid var(--hairline); border-radius: 9px;
   background: #fff; padding: 7px;
+  cursor: zoom-in;
+}
+.pub-fig img:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.pub-figure-link { display: block; border: 0; border-radius: 9px; }
+.pub-figure-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.lightbox {
+  width: min(96vw, 1600px); height: 94vh; max-width: none; max-height: none;
+  padding: 0; margin: auto; border: 1px solid var(--hairline); border-radius: 14px;
+  background: var(--paper); color: var(--ink);
+  box-shadow: 0 24px 70px rgba(28,27,24,0.28);
+}
+.lightbox[open] { display: flex; flex-direction: column; }
+.lightbox::backdrop { background: rgba(28,27,24,0.78); }
+.lightbox-toolbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  flex: none; padding: 12px 16px; border-bottom: 1px solid var(--hairline);
+}
+.lightbox-toolbar p { color: var(--ink-soft); font-size: 0.88rem; }
+.lightbox-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.lightbox-controls button, .lightbox-controls a {
+  padding: 5px 9px; border: 1px solid var(--hairline); border-radius: 5px;
+  background: #fff; color: var(--accent); font: 0.74rem var(--mono);
+  cursor: pointer; white-space: nowrap; line-height: 1.5;
+}
+.lightbox-controls button:hover, .lightbox-controls a:hover { border-color: var(--accent); }
+.lightbox-viewport { flex: 1; min-height: 0; overflow: auto; padding: 16px; }
+.lightbox-viewport img {
+  display: block; width: 100%; height: 100%; object-fit: contain; cursor: zoom-in;
+}
+.lightbox.is-zoomed .lightbox-viewport img {
+  width: auto; height: auto; max-width: none; max-height: none; cursor: zoom-out;
 }
 .pub-venue {
   display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
@@ -245,6 +278,10 @@ body.lang-zh {
   .hero-contacts {
     margin-top: 4px; flex-wrap: wrap; gap: 6px 20px;
   }
+  .lightbox { width: calc(100vw - 16px); height: 94dvh; }
+  .lightbox-toolbar { flex-wrap: wrap; padding: 10px; gap: 8px; }
+  .lightbox-controls { gap: 5px; }
+  .lightbox-viewport { padding: 8px; }
 }
 
 body { overflow-x: hidden; }

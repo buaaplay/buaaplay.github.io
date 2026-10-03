@@ -13,6 +13,8 @@
     'news-3': 'TRACE 与 OVO-S-Bench 入选 <strong>EMNLP 2026 Oral</strong>；OVO-S-Bench 获 <strong class="news-award">Outstanding Award</strong> 提名。',
     'pubs-title': '论文',
     'pubs-note': '* 表示共同一作。',
+    'lightbox-close': '关闭',
+    'lightbox-original': '打开大图',
     'fig-overview': '概览',
     'fig-method': '方法',
     'fig-taxonomy': '分类',
@@ -72,6 +74,73 @@
       applyLang(lang);
     });
   }
+
+  /* ---------- figure lightbox ---------- */
+  function setupLightbox() {
+    var dialog = document.getElementById('lightbox');
+    var expanded = document.getElementById('lightbox-image');
+    var caption = document.getElementById('lightbox-caption');
+    var close = dialog && dialog.querySelector('.lightbox-close');
+    var zoom = document.getElementById('lightbox-zoom');
+    var original = document.getElementById('lightbox-original');
+    var trigger = null;
+    if (!dialog || !expanded || !caption) return;
+
+    function setZoom(active) {
+      dialog.classList.toggle('is-zoomed', active);
+      zoom.setAttribute('aria-pressed', String(active));
+      zoom.textContent = active ? (lang === 'zh' ? '适应窗口' : 'Fit to window') : (lang === 'zh' ? '原尺寸' : 'Original size');
+    }
+
+    function hide() {
+      if (typeof dialog.close === 'function' && dialog.open) dialog.close();
+      else dialog.removeAttribute('open');
+    }
+
+    function show(link) {
+      var img = link.querySelector('img');
+      var article = link.closest('.pub');
+      var label = link.parentElement.querySelector('.pub-fig-label');
+      trigger = link;
+      expanded.src = link.href;
+      expanded.alt = img.alt || 'Expanded figure';
+      caption.textContent = article.querySelector('.pub-acronym').textContent + ' · ' + (label ? label.textContent : '');
+      original.href = link.href;
+      setZoom(false);
+      dialog.querySelector('.lightbox-viewport').scrollTo(0, 0);
+      if (typeof dialog.showModal === 'function') dialog.showModal();
+      else dialog.setAttribute('open', '');
+    }
+
+    document.querySelectorAll('.pub-figure-link').forEach(function (link) {
+      var img = link.querySelector('img');
+      link.setAttribute('aria-label', (img.alt || 'Figure') + ' - expand');
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.addEventListener('click', function (event) {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        show(link);
+      });
+      link.addEventListener('keydown', function (event) {
+        if (event.key === ' ') {
+          event.preventDefault();
+          show(link);
+        }
+      });
+    });
+    if (close) close.addEventListener('click', hide);
+    zoom.addEventListener('click', function () { setZoom(!dialog.classList.contains('is-zoomed')); });
+    expanded.addEventListener('click', function () { setZoom(!dialog.classList.contains('is-zoomed')); });
+    dialog.addEventListener('close', function () {
+      if (trigger) trigger.focus({ preventScroll: true });
+    });
+    dialog.addEventListener('click', function (event) {
+      var rect = dialog.getBoundingClientRect();
+      if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) hide();
+    });
+  }
+
+  setupLightbox();
 
   /* ---------- motion ---------- */
   function revealAll() {
