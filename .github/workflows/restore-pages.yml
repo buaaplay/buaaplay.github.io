@@ -1,0 +1,29 @@
+name: Restore GitHub Pages after temporary unpublish
+
+on:
+  schedule:
+    - cron: '0 0 15 10 *'
+      timezone: Asia/Shanghai
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restore the Pages site and request a build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          pages_url="repos/${GITHUB_REPOSITORY}/pages"
+          if ! gh api "$pages_url" >/dev/null 2>&1; then
+            gh api --method POST "$pages_url" \
+              -f build_type=legacy \
+              -f 'source[branch]=main' \
+              -f 'source[path]=/'
+          fi
+          gh api --method POST "$pages_url/builds"
