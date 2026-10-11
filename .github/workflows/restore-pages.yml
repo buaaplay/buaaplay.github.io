@@ -20,7 +20,12 @@ jobs:
         run: |
           set -euo pipefail
           pages_url="repos/${GITHUB_REPOSITORY}/pages"
-          if ! gh api "$pages_url" >/dev/null 2>&1; then
+          if gh api "$pages_url" >/dev/null 2>&1; then
+            gh api --method PUT "$pages_url" \
+              -f build_type=legacy \
+              -f 'source[branch]=main' \
+              -f 'source[path]=/'
+          else
             gh api --method POST "$pages_url" \
               -f build_type=legacy \
               -f 'source[branch]=main' \
