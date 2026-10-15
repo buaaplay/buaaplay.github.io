@@ -14,6 +14,9 @@ permissions:
 jobs:
   restore:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out the live site source
         uses: actions/checkout@v4
@@ -26,4 +29,5 @@ jobs:
         with:
           path: .
       - name: Restore the public site
+        id: deployment
         uses: actions/deploy-pages@v4
